@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.stage.StageStyle;
 
 public class App extends Application
@@ -20,9 +19,10 @@ public class App extends Application
     @Override
     public void start(Stage stage) throws IOException
     {
-        scene = new Scene(loadFXML(PRINCIPAL_MENU).load(), 640, 480);
+        scene = new Scene(loadFXML(PRINCIPAL_MENU).load());
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
+        ((PrincipalMenuController) App.setRoot(App.PRINCIPAL_MENU)).cargarMenu();
         stage.show();
     }
 

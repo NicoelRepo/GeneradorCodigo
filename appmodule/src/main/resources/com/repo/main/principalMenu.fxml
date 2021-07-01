@@ -10,9 +10,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../cssfiles/cssfile.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.repo.main.PrincipalMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="846.0" stylesheets="@../cssfiles/cssfile.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.repo.main.PrincipalMenuController">
    <top>
-      <ToolBar id="toolbarSuperior" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <ToolBar id="toolbarSuperior" fx:id="toolbarPrincipal" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <items>
             <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#cerrar" stylesheets="@../cssfiles/cssfile.css">
                <graphic>
