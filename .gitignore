@@ -1,2 +1,3 @@
-./srvmodule/target
-./appmodule/target
+srvmodule/target/
+appmodule/target/
+*.class

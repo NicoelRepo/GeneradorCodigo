@@ -34,7 +34,7 @@
 @REM ----------------------------------------------------------------------------
 
 @REM Begin all REM lines with '@' in case MAVEN_BATCH_ECHO is 'on'
-@echo off
+@echo ON
 @REM set title of command window
 title %0
 @REM enable echoing by setting MAVEN_BATCH_ECHO to 'on'
@@ -178,5 +178,5 @@ if exist "%HOME%\mavenrc_post.cmd" call "%HOME%\mavenrc_post.cmd"
 if "%MAVEN_BATCH_PAUSE%" == "on" pause
 
 if "%MAVEN_TERMINATE_CMD%" == "on" exit %ERROR_CODE%
-
+cmd /k
 exit /B %ERROR_CODE%
