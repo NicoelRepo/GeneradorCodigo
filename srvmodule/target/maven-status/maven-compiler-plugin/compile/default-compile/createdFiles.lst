@@ -1,0 +1,12 @@
+com\repo\entity\CodeFile.class
+com\repo\datos\SingletonDatos.class
+com\repo\estrategy\EstrategyGenerateText.class
+com\repo\readersAndWriters\FileWriter.class
+module-info.class
+com\repo\estrategy\SimpleGenerateText.class
+com\repo\utilSRV\UtilClone.class
+com\repo\logica\GeneradorPrincipal.class
+com\repo\entity\Plantilla.class
+com\repo\readersAndWriters\FileReader.class
+com\repo\entity\Parameter.class
+com\repo\readersAndWriters\XMLReader.class

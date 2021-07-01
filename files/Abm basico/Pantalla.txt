@@ -1,0 +1,59 @@
+package com.coto.gescom.abm.#NOMBRE#;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+
+import com.coto.gescom.abm.#NOMBRE#.models.Modelo#NOMBRE#;
+import com.coto.gescom.base.LaunchReport;
+import com.coto.gescom.base.aplicacionBase.abmBase.PanelAbm.TipoTabla;
+import com.coto.gescom.base.aplicacionBase.abmBase.builders.AbmSimpleBuilder;
+import com.coto.gescom.base.aplicacionBase.estructuraEditores.EditorFactory;
+import com.coto.gescom.base.aplicacionBase.estructuraEditores.EstructuraEditores;
+import com.coto.gescom.dto.#NOMBRE#DTO;
+
+public class Pantalla extends JPanel
+{
+	LaunchReport aplicacion = null;
+	DataConnector dataConnector = null;
+	
+	Abm#NOMBRE# abm = null;
+	
+	public static final String[] OPCIONES_CTIPAPLI = new String[]{"B", "P", "I", "M"};
+	public static final String[] OPCIONES_CTIPIMPU = new String[]{"P", "I", "R", "B"};
+	public static final String[] OPCIONES_XPORIMPO = new String[]{"P", "I"};
+	
+	public Pantalla(LaunchReport #NOMBRE#, DataConnector dataconnector)
+	{
+		this.setLayout(new BorderLayout());
+		this.aplicacion = #NOMBRE#;
+		this.dataConnector = dataconnector;
+		
+
+		Modelo modelo = new Modelo(this.aplicacion.getString("abm.columns"));
+		
+
+		EstructuraEditores estructura = new EstructuraEditores(#NOMBRE#DTO.class);
+		int col = 1;
+		
+		
+
+		abm = AbmSimpleBuilder.crearBuilder(new Abm#NOMBRE#(dataconnector))
+						.aplicacion(aplicacion)
+						.claseDTO(#NOMBRE#DTO.class)
+						.modeloAbmBase(modelo)
+						.camposParaMuestraDeErrores(" 'columnas a mostrar en el dialogo de error' ")
+						.estructuraEditores(estructura)
+						.tipoTabla(TipoTabla.JXTable)
+						.habilitarCrear()
+						.habilitarDarDeBaja()
+						.habilitarBuscar()
+						.habilitarGuardar()
+						.build();
+		
+
+		this.add(abm.getPanelAbm(), BorderLayout.CENTER);
+		abm.getPanelAbm().getToolBar().cargarBotones("0", "0");
+		estructura.mostrarEstructura();
+	}
+}
