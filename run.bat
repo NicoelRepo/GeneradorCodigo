@@ -1,2 +1,2 @@
-MKDIR "files"
-START /MIN /D .\appmodule mvnw.cmd javafx:run
+ECHO ON
+START /D .\appmodule mvnw.cmd javafx:run
