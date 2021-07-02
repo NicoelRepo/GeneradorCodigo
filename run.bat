@@ -1,2 +1,3 @@
 ECHO ON
-START /D .\appmodule mvnw.cmd javafx:run
+START /min /D .\appmodule mvnw.cmd javafx:run
+EXIT

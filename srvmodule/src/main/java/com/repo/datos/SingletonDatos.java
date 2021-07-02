@@ -4,7 +4,6 @@ import com.repo.entity.CodeFile;
 import com.repo.entity.Parameter;
 import com.repo.entity.Plantilla;
 import com.repo.estrategy.EstrategyGenerateText;
-import com.repo.estrategy.SimpleGenerateText;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

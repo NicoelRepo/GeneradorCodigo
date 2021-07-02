@@ -1,5 +1,5 @@
 .root{
-    -fx-base: #AFC1FA;
+    -fx-base: #779ac2;
     -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
 }
 
@@ -12,27 +12,35 @@
 }
 
 #botonesPrincipales:pressed {
-    -fx-background-color: #818185;
+    -fx-background-color: #93939e;
 }
 
 #titulo {
     -fx-text-fill: black;
     -fx-font-size: 14;
-    -fx-font-weight: bold;
 }
 
 #toolbarSuperior {
-    -fx-background-color: #577DF5;
+    -fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #2651dd, #6b8dfd);
 }
 
-.Vbox{
-    -fx-background-color: #D7E0FE;
+#toolbarSuperiorSinEfecto {
+    -fx-background-color: #6b8dfd;
+}
+
+.tool-bar{
+    /*-fx-background-color: #567fb9;*/
+    -fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #3c639b, #567fb9);
+}
+
+.vbox{
+    -fx-background-color: #0e1013;
 }
 
 .label{
     -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-weight: normal;
-    -fx-text-fill: black;
+    -fx-text-fill: rgb(0, 0, 0);
     -fx-alignament: center;
 }
 
@@ -43,3 +51,4 @@
 .list-view {
     -fx-background-color: #FCFCFE;
 }
+

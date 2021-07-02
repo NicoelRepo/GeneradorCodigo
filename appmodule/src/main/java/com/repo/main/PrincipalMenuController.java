@@ -64,6 +64,20 @@ public class PrincipalMenuController implements Initializable
         Buttons.minimizarVentana((Stage) btnVerPlantilla.getScene().getWindow());
     }
 
+    @FXML
+    private void maximizarMinimizar()
+    {
+        Stage stage = (Stage) btnVerPlantilla.getScene().getWindow();
+        if (stage.isMaximized())
+        {
+            stage.setMaximized(false);
+        }
+        else
+        {
+            stage.setMaximized(true);
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {

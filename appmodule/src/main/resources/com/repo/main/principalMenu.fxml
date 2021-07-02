@@ -9,40 +9,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="846.0" stylesheets="@../cssfiles/cssfile.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.repo.main.PrincipalMenuController">
-   <top>
-      <ToolBar id="toolbarSuperior" fx:id="toolbarPrincipal" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-        <items>
-            <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#cerrar" stylesheets="@../cssfiles/cssfile.css">
-               <graphic>
-                  <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/cerrar.png" />
-                     </image>
-                     <effect>
-                        <Blend />
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button id="botonesPrincipales" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#minimizar" stylesheets="@../cssfiles/cssfile.css">
-               <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/minimizar.png" />
-                     </image>
-                     <effect>
-                        <Blend />
-                     </effect>
-                  </ImageView>
-               </graphic>
-            </Button>
-        </items>
-      </ToolBar>
-   </top>
    <center>
-      <TableView fx:id="tableViewPlantillas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableViewPlantillas" prefHeight="390.0" prefWidth="742.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="columnName" prefWidth="160.0" text="Nombre de Plantilla" />
           <TableColumn fx:id="columnNumberFiles" prefWidth="132.0" text="Nro de Archivos" />
@@ -51,26 +22,60 @@
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
       </TableView>
    </center>
    <left>
       <ToolBar orientation="VERTICAL" prefHeight="365.0" prefWidth="55.0" BorderPane.alignment="CENTER">
          <items>
-          <Button id="botonesPrincipales" fx:id="btnVerPlantilla" mnemonicParsing="false" onAction="#switchToPlantilla" prefHeight="28.0" prefWidth="0.0" stylesheets="@../cssfiles/cssfile.css">
-               <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/lupa.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
+          <Button fx:id="btnVerPlantilla" mnemonicParsing="false" onAction="#switchToPlantilla" prefHeight="30.0" prefWidth="82.0" stylesheets="@../cssfiles/cssfile.css" text="Ver Plantilla" />
          </items>
          <BorderPane.margin>
-            <Insets />
+            <Insets bottom="5.0" />
          </BorderPane.margin>
          <padding>
             <Insets left="10.0" right="10.0" top="10.0" />
          </padding>
       </ToolBar>
    </left>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <top>
+      <HBox prefHeight="0.0" prefWidth="846.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar id="toolbarSuperior" fx:id="toolbarPrincipal1" nodeOrientation="LEFT_TO_RIGHT" prefHeight="72.0" prefWidth="423.0" />
+            <ToolBar id="toolbarSuperiorSinEfecto" fx:id="toolbarPrincipal" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="600.0">
+              <items>
+                  <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#cerrar" stylesheets="@../cssfiles/cssfile.css">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cerrar.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="botonesPrincipales" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#minimizar" stylesheets="@../cssfiles/cssfile.css">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/minimizar.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>

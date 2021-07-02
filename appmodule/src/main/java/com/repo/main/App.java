@@ -12,6 +12,7 @@ import javafx.stage.StageStyle;
 public class App extends Application
 {
     private static Scene scene;
+    private static Stage stage;
 
     static String PRINCIPAL_MENU = "principalMenu";
     static String PLANTILLA = "plantilla";
@@ -19,17 +20,24 @@ public class App extends Application
     @Override
     public void start(Stage stage) throws IOException
     {
-        scene = new Scene(loadFXML(PRINCIPAL_MENU).load());
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(scene);
+        App.stage = stage;
         ((PrincipalMenuController) App.setRoot(App.PRINCIPAL_MENU)).cargarMenu();
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 
     static Initializable setRoot(String fxml) throws IOException
     {
         FXMLLoader fxmlLoader = loadFXML(fxml);
-        scene.setRoot(fxmlLoader.load());
+        if (scene == null)
+        {
+            scene = new Scene(fxmlLoader.load());
+            stage.setScene(scene);
+        }
+        else
+        {
+            scene.setRoot(fxmlLoader.load());
+        }
         return fxmlLoader.getController();
     }
 

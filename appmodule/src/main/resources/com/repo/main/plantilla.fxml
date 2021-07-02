@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="639.0" prefWidth="1073.0" stylesheets="@../cssfiles/cssfile.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.repo.main.PlantillaController">
+<BorderPane prefHeight="639.0" prefWidth="1150.0" stylesheets="@../cssfiles/cssfile.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.repo.main.PlantillaController">
    <top>
       <HBox alignment="CENTER" prefHeight="39.0" prefWidth="602.0" BorderPane.alignment="CENTER">
          <children>
@@ -26,7 +26,7 @@
                <items>
                   <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#switchToPrincipalMenu" stylesheets="@../cssfiles/cssfile.css">
                      <graphic>
-                        <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/flecha-izquierda.png" />
                            </image>
@@ -35,11 +35,11 @@
                   </Button>
                </items>
             </ToolBar>
-            <ToolBar id="toolbarSuperior" fx:id="toolbarPrincipalDER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+            <ToolBar id="toolbarSuperiorSinEfecto" fx:id="toolbarPrincipalDER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                <items>
                   <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#cerrar" stylesheets="@../cssfiles/cssfile.css">
                      <graphic>
-                        <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/cerrar.png" />
                            </image>
@@ -49,9 +49,18 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#maximizarMinimizar">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/maximizar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                   <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#minimizar" stylesheets="@../cssfiles/cssfile.css">
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/minimizar.png" />
                            </image>
@@ -67,17 +76,17 @@
       </HBox>
    </top>
    <center>
-      <SplitPane dividerPositions="0.7" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.6429104477611941" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <items>
-            <VBox prefHeight="522.0" prefWidth="588.0">
+            <VBox alignment="CENTER" prefHeight="522.0" prefWidth="588.0">
                <children>
-                  <ToolBar fx:id="toolbarHerramientas" prefHeight="30.0" prefWidth="703.0" />
+                  <ToolBar fx:id="toolbarHerramientas" prefHeight="34.0" prefWidth="738.0" />
                   <Label id="titulo" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="72.0" stylesheets="@../cssfiles/cssfile.css" text="Estrategias" textAlignment="CENTER">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                      <padding>
-                        <Insets bottom="-4.0" top="-4.0" />
+                        <Insets bottom="5.0" top="5.0" />
                      </padding>
                   </Label>
                   <ListView fx:id="listViewEstrategias" prefHeight="156.0" prefWidth="523.0" stylesheets="@../cssfiles/cssfile.css">
@@ -85,12 +94,18 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </opaqueInsets>
                   </ListView>
-                  <Label id="titulo" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="76.0" stylesheets="@../cssfiles/cssfile.css" text="Parámetros" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+                  <Label id="titulo" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="76.0" stylesheets="@../cssfiles/cssfile.css" text="Parámetros" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding></Label>
                   <TableView fx:id="tableViewParametros" cache="true" editable="true" prefHeight="169.0" prefWidth="523.0" stylesheets="@../cssfiles/cssfile.css" VBox.vgrow="ALWAYS">
                      <columns>
                         <TableColumn fx:id="tableColumnName" prefWidth="207.0" text="Parámetro" />
                         <TableColumn fx:id="tableColumnValue" prefWidth="392.0" text="Valor" />
                      </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
                   </TableView>
                </children>
                <padding>
@@ -99,7 +114,7 @@
             </VBox>
             <VBox prefHeight="522.0" prefWidth="432.0">
                <children>
-                  <TreeView fx:id="treeViewFiles" prefHeight="200.0" prefWidth="449.0" />
+                  <TreeView fx:id="treeViewFiles" prefHeight="433.0" prefWidth="310.0" VBox.vgrow="ALWAYS" />
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

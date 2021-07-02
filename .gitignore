@@ -1,3 +1,6 @@
 srvmodule/target/
 appmodule/target/
 *.class
+.project
+.settings/
+.classpath
