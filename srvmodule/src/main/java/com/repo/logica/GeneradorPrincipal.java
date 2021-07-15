@@ -28,10 +28,7 @@ public class GeneradorPrincipal
             codeFile.setText(texto);
 
             // Se aplican las estrategias al codefile
-            for (EstrategyGenerateText estrategy : plantilla.getEstrategysSecuence())
-            {
-                estrategy.generate(codeFile);
-            }
+            aplicarEstrategias(plantilla, codeFile);
 
             // Se obtiene la ruta donde se guardará el archivo
             File directorioDondeGuardar = new File(path + "\\" + codeFile.getPath());
@@ -47,6 +44,14 @@ public class GeneradorPrincipal
                 e.printStackTrace();
             }
 
+        }
+    }
+
+    public static void aplicarEstrategias(Plantilla plantilla, CodeFile codeFile)
+    {
+        for (EstrategyGenerateText estrategy : plantilla.getEstrategysSecuence())
+        {
+            estrategy.generate(codeFile);
         }
     }
 
@@ -69,10 +74,7 @@ public class GeneradorPrincipal
                 codeFile.setText(texto);
 
                 // Se aplican las estrategias al codefile
-                for (EstrategyGenerateText estrategy : plantilla.getEstrategysSecuence())
-                {
-                    estrategy.generate(codeFile);
-                }
+                aplicarEstrategias(plantilla, codeFile);
 
                 // Se obtiene la ruta donde se guardará el archivo
                 File directorioDondeGuardar = new File(path);

@@ -13,6 +13,7 @@ public class Plantilla implements Cloneable, Serializable
 {
     final private List<CodeFile> listCodeFiles;
     final String name;
+    String defaultPath;
     private final List<EstrategyGenerateText> estrategysSecuence = new LinkedList<>();
 
     public Plantilla(List<CodeFile> listCodeFiles, String name)
@@ -44,6 +45,16 @@ public class Plantilla implements Cloneable, Serializable
             + estrategysSecuence.stream().map((e) -> e.getClass().getSimpleName()).collect(Collectors.toList())
             + ", hashcode=" + this.hashCode()
             + '}';
+    }
+
+    public void setDefaultPath(String defaultPath)
+    {
+        this.defaultPath = defaultPath;
+    }
+    
+    public String getDefaultPath()
+    {
+        return defaultPath;
     }
 
     @Override

@@ -45,10 +45,18 @@
 }
 
 .table-view {
-    -fx-background-color: #FCFCFE;
+    -fx-background-color: #F0f9fe;
 }
 
 .list-view {
-    -fx-background-color: #FCFCFE;
+    -fx-background-color: #F0f9fe;
+}
+
+#textFlow {
+    -fx-background-color: #F0f9fe;
+}
+
+.tab-pane *.tab-header-area *.tab-header-background {
+    -fx-background-color: #779ac2;
 }
 

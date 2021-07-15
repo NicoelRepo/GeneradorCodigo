@@ -35,7 +35,9 @@ public class PrincipalMenuController implements Initializable
     private TableColumn<Plantilla, String> columnEstrategias;
 
     @FXML
-    private ToolBar toolbarPrincipal;
+    private ToolBar toolbarPrincipalDER;
+    @FXML
+    private ToolBar toolbarPrincipalIZQ;
     
     @FXML
     private void switchToPlantilla() throws IOException
@@ -90,6 +92,7 @@ public class PrincipalMenuController implements Initializable
     
     public void cargarMenu()
     {
-        Drag.makeCanDrag(toolbarPrincipal);
+        Drag.makeCanDrag(toolbarPrincipalDER);
+        Drag.makeCanDrag(toolbarPrincipalIZQ);
     }
 }

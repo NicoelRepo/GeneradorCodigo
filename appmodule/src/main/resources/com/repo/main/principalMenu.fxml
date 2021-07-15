@@ -46,8 +46,8 @@
    <top>
       <HBox prefHeight="0.0" prefWidth="846.0" BorderPane.alignment="CENTER">
          <children>
-            <ToolBar id="toolbarSuperior" fx:id="toolbarPrincipal1" nodeOrientation="LEFT_TO_RIGHT" prefHeight="72.0" prefWidth="423.0" />
-            <ToolBar id="toolbarSuperiorSinEfecto" fx:id="toolbarPrincipal" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="600.0">
+            <ToolBar id="toolbarSuperior" fx:id="toolbarPrincipalIZQ" nodeOrientation="LEFT_TO_RIGHT" prefHeight="72.0" prefWidth="423.0" />
+            <ToolBar id="toolbarSuperiorSinEfecto" fx:id="toolbarPrincipalDER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="600.0">
               <items>
                   <Button id="botonesPrincipales" mnemonicParsing="false" onAction="#cerrar" stylesheets="@../cssfiles/cssfile.css">
                      <graphic>

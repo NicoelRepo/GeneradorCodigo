@@ -118,7 +118,7 @@ public class Pantalla extends JPanel
 					ArrayList<JTable> tb = new ArrayList<JTable>();
 					ArrayList<String> nom = new ArrayList<String>();
 					tb.add(tabla);
-					tb.add(/* titulo a mostrar en el excel */);
+					tb.add("#TITULO#");
 
 					ArrayList<String> param = new ArrayList<String>();
 					/* Se agregan los filtros usados */
@@ -164,8 +164,7 @@ public class Pantalla extends JPanel
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			Alerta.mostrarMensaje("Ocurrio un error al intentar exportar el archivo"
-					+ e.getMessage());
+			Alerta.mostrarMensaje("Ocurrio un error al intentar exportar el archivo" + e.getMessage());
 		}
 
 

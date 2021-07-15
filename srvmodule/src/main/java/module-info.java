@@ -5,4 +5,5 @@ module srvmodule {
     exports com.repo.logica;
     exports com.repo.estrategy;
     exports com.repo.utilSRV;
+    exports com.repo.readersAndWriters;
 }

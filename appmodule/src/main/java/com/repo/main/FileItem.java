@@ -24,8 +24,8 @@ public class FileItem extends Label
     }
 
     CodeFile codeFile;
-    final Type type;
-    final String name;
+    public final Type type;
+    public final String name;
     private Node icon;
 
     private static final String ROOT_NAME = "Root";

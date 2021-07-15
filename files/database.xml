@@ -5,35 +5,37 @@
 		<estrategy estrategia="com.repo.estrategy.SimpleGenerateText">
 			<param>NOMBRE</param>
 		</estrategy>
+		<default_path></default_path>
 		<file>
-			<name>#NOMBRE#Process.java</name>
-			<path></path>
-		</file>
-		<file>
-			<name>#NOMBRE#Delegate.java</name>
-			<path></path>
-		</file>
-		<file>
-			<name>#NOMBRE#Local.java</name>
-			<path></path>
+			<name>#NOMBRE#Dao.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/dao</path>
 		</file>
 		<file>
 			<name>#NOMBRE#EJB.java</name>
-			<path></path>
+			<path>GESCOM_SRV/src/com/coto/gescom/session</path>
 		</file>
 		<file>
-			<name>#NOMBRE#DAO.java</name>
-			<path></path>
+			<name>#NOMBRE#Delegate.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/delegate</path>
+		</file>
+		<file>
+			<name>#NOMBRE#Local.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/session/interfaces</path>
 		</file>
 		<file>
 			<name>#NOMBRE#DTO.java</name>
-			<path></path>
+			<path>GESCOM_SRV/src/com/coto/gescom/dto</path>
+		</file>
+		<file>
+			<name>#NOMBRE#Process.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/servlet/process</path>
 		</file>
 	</plantilla>
 	<plantilla>
 		<name>Reporte</name>
 		<estrategy estrategia="com.repo.estrategy.SimpleGenerateText">
 			<param>NOMBRE</param>
+			<param>TITULO</param>
 		</estrategy>
 		<file>
 			<name>#NOMBRE#.java</name>
@@ -48,7 +50,7 @@
 			<path>GESCOM_APP/src/com/coto/gescom/report/#NOMBRE:firstToLowerCase#</path>
 		</file>
 		<file>
-			<name>MiModeloTabla.java</name>
+			<name>ModeloTabla.java</name>
 			<path>GESCOM_APP/src/com/coto/gescom/report/#NOMBRE:firstToLowerCase#/models#NOMBRE#</path>
 		</file>
 		<file>
@@ -80,7 +82,62 @@
 			<path>GESCOM_SRV/src/com/coto/gescom/session/interfaces</path>
 		</file>
 		<file>
-			<name>#NOMBRE#DTO.txt</name>
+			<name>#NOMBRE#DTO.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/dto</path>
+		</file>
+		<file>
+			<name>#NOMBRE#Process.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/servlet/process</path>
+		</file>
+	</plantilla>
+	<plantilla>
+		<name>Abm Basico</name>
+		<estrategy estrategia="com.repo.estrategy.SimpleGenerateText">
+			<param>NOMBRE</param>
+		</estrategy>
+		<default_path></default_path>
+		<file>
+			<name>Pantalla.java</name>
+			<path><path>GESCOM_APP/src/com/coto/gescom/abm/#NOMBRE:firstToLowerCase#</path></path>
+		</file>
+		<file>
+			<name>ModeloTabla.java</name>
+			<path><path>GESCOM_APP/src/com/coto/gescom/abm/#NOMBRE:firstToLowerCase#/models</path></path>
+		</file>
+		<file>
+			<name>Abm.java</name>
+			<path><path>GESCOM_APP/src/com/coto/gescom/abm/#NOMBRE:firstToLowerCase#</path></path>
+		</file>
+		<file>
+			<name>DataConnector.java</name>
+			<path><path>GESCOM_APP/src/com/coto/gescom/abm/#NOMBRE:firstToLowerCase#</path></path>
+		</file>
+		<file>
+			<name>messages.properties</name>
+			<path>GESCOM_APP/src/com/coto/gescom/resource/bundle/abm/#NOMBRE:firstToLowerCase#</path>
+		</file>
+		<file>
+			<name>messages_es_AR.properties</name>
+			<path>GESCOM_APP/src/com/coto/gescom/resource/bundle/abm/#NOMBRE:firstToLowerCase#</path>
+		</file>
+		<file>
+			<name>#NOMBRE#Dao.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/dao</path>
+		</file>
+		<file>
+			<name>#NOMBRE#EJB.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/session</path>
+		</file>
+		<file>
+			<name>#NOMBRE#Delegate.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/delegate</path>
+		</file>
+		<file>
+			<name>#NOMBRE#Local.java</name>
+			<path>GESCOM_SRV/src/com/coto/gescom/session/interfaces</path>
+		</file>
+		<file>
+			<name>#NOMBRE#DTO.java</name>
 			<path>GESCOM_SRV/src/com/coto/gescom/dto</path>
 		</file>
 		<file>

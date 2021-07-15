@@ -60,7 +60,7 @@ public class SingletonDatos
 
             String namePlantilla = null;
             Optional<Node> optionalNode = hijosConCiertoNombre(nodoPlantilla, "name")
-                    .findAny();
+                .findAny();
             if (optionalNode.isPresent())
             {
                 namePlantilla = optionalNode.get().getTextContent();
@@ -69,7 +69,16 @@ public class SingletonDatos
             {
                 System.out.println("No hay nombre definido");
             }
-
+            
+            // Si se setea un default_path, agregarlo a la plantilla
+            String defaultPath = null;
+            var optionalDefaultPath = hijosConCiertoNombre(nodoPlantilla, "default_path")
+                .findAny();
+            if (optionalDefaultPath.isPresent())
+            {
+                defaultPath = optionalDefaultPath.get().getTextContent();
+            }
+            
             List<EstrategyGenerateText> listaDeExtrategias = new ArrayList<>();
             hijosConCiertoNombre(nodoPlantilla, "estrategy")
                     .forEach(nodeEstrategia -> {
@@ -100,6 +109,7 @@ public class SingletonDatos
 
             Plantilla plantilla = new Plantilla(listaArchivos, namePlantilla);
             plantilla.getEstrategysSecuence().addAll(listaDeExtrategias);
+            plantilla.setDefaultPath(defaultPath);
             listaPlantillas.add(plantilla);
         }
     }
